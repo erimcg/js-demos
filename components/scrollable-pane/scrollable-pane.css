@@ -1,0 +1,39 @@
+:host {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    height: 680px;
+    width: fit-content;
+
+    border: 1px aquamarine solid;
+    background-color: lightseagreen;
+}
+
+#scrollable-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 600px;
+  
+
+    overflow-y: scroll;
+}
+
+#title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Make scrollbar always appear */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}

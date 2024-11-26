@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Font-fil-a';
+    src: url('./fonts/font-fil-a.ttf') format('truetype')
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/pasture.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+main {
+    width: 100%;
+    height: 85%;
+}
+
+#flying-bird {
+    position: absolute;
+    left: -100px;
+    top: 350px;
+    transform: scale(0);
+    animation: move-bird-start 6s ease-in-out 3s 1 forwards;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes move-bird-start {
+    50% {
+        top: 20px;
+        left: 300px;
+        transform: scale(0.3);
+    }
+
+    60% {
+        top: 20px;
+        left: 300px;
+        transform: scale(0.3);
+        opacity: 1;
+    }
+
+    100% {
+        top: 150px;
+        left: 900px;
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
+#slider {
+    position: absolute;
+    left: -300px;
+
+    width: 300px;
+    height: inherit;
+
+    transition: all 1s ease-in-out 0.2s;
+}
+
+#menu {
+    position: absolute;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: darksalmon;
+    z-index: 2;
+    text-align: center;
+}
+
+#slider img {
+    position: absolute;
+
+    transition: all 1s ease-in-out 0.2s;
+    z-index: 1;
+}
+
+
+#slider:hover > img {
+    transform: scale(0.6);
+
+}
+
+#slider:hover {
+    left: 0;
+}
+
+#slider a {
+    display: inline-block;
+    margin: 20px;
+    font-size: 30px;
+    font-family: Font-fil-a;
+    text-decoration: none;
+    color: white;
+}

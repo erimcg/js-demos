@@ -1,0 +1,21 @@
+:host {  /* shadow host */
+    display: inline-block;
+    width: 300px;
+    height: fit-content;
+
+    padding: 25px;
+    margin: 2px;
+}
+
+#container {
+    padding: 20px;
+    background-color: deepskyblue;
+}
+
+#date {
+    font-size: 1rem;
+}
+
+#title {
+    font-size: 1.5rem;
+}

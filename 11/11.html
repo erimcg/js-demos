@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="11.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Lecture 11 - Web Components</h1>
+    <hr>
+
+    <main>
+        <framed-image1 title="Monkey" src="../images/monkey.png"></framed-image1>
+        <framed-image2 title="Bear">
+            <img src="../images/bear.png">
+        </framed-image2>
+        <framed-image3>
+            <h3 slot="heading">Leopard</h3>
+            <img slot="image" src="../images/leopard.png">
+        </framed-image3>
+    </main>
+
+    <script src="../components/framed-image/framed-image1.js"></script>
+    <script src="../components/framed-image/framed-image2.js"></script>
+    <script src="../components/framed-image/framed-image3.js"></script>
+
+    <script src="11.js"></script>
+</body>
+
+</html>

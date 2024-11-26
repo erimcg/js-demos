@@ -1,0 +1,45 @@
+body {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+
+    overflow: hidden;
+}
+
+main {
+    overflow: auto;
+    height: 75vh;
+}
+
+section {
+    margin-top: 10px;
+    background-color: linen;
+
+    height: 200px;
+}
+
+#box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+
+    background-color: #90cbee;
+}
+
+span {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.resizable {
+    /* resize applies to elm with overflow set to anything other than visible */
+    resize: both;
+    overflow: scroll;
+}
+
+#autoLoadButton {
+    margin: 10px auto;
+    display: block;
+
+    font-size: 2rem;
+}

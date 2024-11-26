@@ -1,0 +1,45 @@
+
+body {
+    background-color: red;
+}
+
+section {
+    max-width: fit-content;
+    margin-inline: auto;
+    margin-top: 25%;
+
+    padding: 10px;
+    background-color: blue;
+}
+
+main {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    padding: 10px;
+    background-color: yellow;
+}
+
+main div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#circle {
+    border-radius: 50%;
+}
+
+#rectangle {
+    width: 50px;
+}
+
+#oval {
+    width: 50px;
+    border-radius: 50px / 100px;
+}
+
+#triangle {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}

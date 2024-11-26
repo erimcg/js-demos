@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="12.css">
+    <title>Lecture 12</title>
+
+    <script src="../components/album-card/album-card.js"></script>
+    <script src="../components/scrollable-pane/scrollable-pane.js"></script>
+    
+</head>
+<body>
+    <h1>Lecture 12 - Dynamically Created Web Components</h1>
+    <hr>
+
+    <main>
+        <!-- programatically fill slot of scrollable-pane in 12.js -->
+        <scrollable-pane id="album-list"></scrollable-pane>
+
+        <!-- use scrollable-pane as shown in last lecture -->
+        <scrollable-pane title="Normal">
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+            <album-card slot="cards" date="Date" title="Title"></album-card>
+        </scrollable-pane>
+
+        <!-- Test to see if album-card works independently -->
+        <album-card date="Date" title="Title"></album-card>
+    </main>
+
+    <script type="module" src="12.js"></script>
+</body>
+</html>

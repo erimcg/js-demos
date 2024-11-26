@@ -1,0 +1,16 @@
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+section {
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section:first-line {
+    font-size: 2em;
+}

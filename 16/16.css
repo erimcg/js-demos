@@ -1,0 +1,84 @@
+
+body {
+    padding: 20px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    margin: auto;
+    width: fit-content;
+}
+
+#newMessage {
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 50px;
+}
+
+#deleteAllButton {
+    min-width: 300px;
+    height: 50px;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    border: none;
+    box-shadow: 0px 0px 5px #c1c1c1;
+}
+
+#deleteAllButton:hover {
+    color: white;
+    background-color: red;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f0f8ff;
+
+    min-width: 300px;
+}
+
+.message:hover {
+    background-color: #f8f8f8;
+}
+
+.message .username {
+    color: #1D9BF0;
+    align-self: end;
+}
+
+.message .count {
+    color: #1D9BF0;
+    align-self: end;
+}
+
+.message .count:before {
+    content: "("
+}
+
+.message .count:after {
+    content: ")"
+}
+
+.message .text {
+    font-size: 2rem;
+}

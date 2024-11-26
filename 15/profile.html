@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <script defer src="profile.js"></script>
+    <script defer src="loadTheme.js"></script>
+</head>
+
+<body>
+        <h1>Profile</h1>
+
+        <fieldset>
+            <legend>Theme</legend>
+        
+            <div>
+                <input name="theme" type="radio" id="lightTheme" value="light-theme" checked />
+                <label for="lightTheme">Light</label>
+            </div>
+        
+            <div>
+                <input name="theme" type="radio" id="darkTheme" value="dark-theme" />
+                <label for="darkTheme">Dark</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <button onClick="history.back()">Close</button>
+
+</body>
+
+</html>

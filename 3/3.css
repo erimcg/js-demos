@@ -1,0 +1,70 @@
+:root {
+    --light-color: #FCFCFC;
+    --medium-color: #D9D9D9;
+    --dark-color: #585858;
+    --accent-color: #f1731c;
+
+    --small-font: 0.75rem;
+    --medium-font: 1.5rem;
+    --large-font: 3rem;
+
+    --light-font-color: #FCFCFC;
+    --dark-font-color: #585858;
+}
+
+body {
+    margin: 30px;
+}
+
+legend {
+    font-size: var(--medium-font);
+}
+
+fieldset {
+    padding: 20px;
+}
+
+label {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input[type='text'] {
+    background-color: var(--medium-color);
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: 0;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 1;
+    box-shadow: 0px 0px 10px 2px lightgrey;
+}
+
+#summary {
+    background-color: var(--accent-color);
+    text-align: center;
+
+    padding: 25px;
+    max-width: 300px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+#summary > h1 {
+    margin: 5px;
+}

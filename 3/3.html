@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="3.css">
+    <title>Lecture 3</title>
+    <script defer type="module" src="3.js"></script>
+</head>
+
+<body>
+    <h1 class="title">Lecture 3</h1>
+
+    <section>
+        <form>
+            <fieldset>
+                <legend>Calculator</legend>
+
+                <label for="firstInteger">First integer</label><br>
+                <input type="text" id="firstInteger"> <br>
+
+                <label for="secondInteger">Second integer</label><br>
+                <input type="text" id="secondInteger"> <br>
+
+                <button type="button" id="computeSumButton">+</button>
+                <br>
+
+                <label for="result">Result</label><br>
+                <input type="text" id="result"> <br>
+
+                <input type="checkbox" id="displaySummary">
+                <label for="displaySummary"> Display summary</label>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="summary" style="display: none">
+    </section>
+
+    <section>
+        <pre><code id="code"></code></pre>
+    </section>
+
+    <script type="module">
+        import { displayScript } from "../modules/display-script.js"
+
+        let node = document.querySelector("#code")
+        displayScript("./3.js", node);
+    </script>
+</body>
+
+</html>

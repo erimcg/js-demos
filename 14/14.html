@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 14</title>
+    <link rel="stylesheet" href="14.css">
+    <script defer src="14.js"></script>
+</head>
+
+<body>
+    <h1>Lecture 14 - Drag and Drop</h1>
+    <hr>
+
+    <main>
+        <section id="example1">
+            <h4>Example 1</h4>
+            <div class="demo">
+                <div class="items">
+                    <div class="circle" draggable="true"></div>
+                    <div class="circle" draggable="true"></div>
+                    <div class="circle" draggable="false"></div>
+                </div>
+
+                <div class="dropzone"></div>
+            </div>
+        </section>
+
+        <section id="example2">
+            <h4>Example 2</h4>
+            <div class="demo">
+                <div class="items">
+                    <ul>
+                        <li draggable="true">Apple</li>
+                        <li draggable="true">Banana</li>
+                        <li draggable="true">Grape</li>
+                    </ul>
+                </div>
+
+                <div class="dropzone">
+                    <p id="dropzone-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="example3">
+            <h4>Example 3</h4>
+            <div class="demo">
+                <div class="items">
+                    <img id="wolf" draggable="true" src="../images/wolf.png">
+                </div>
+
+                <div class="dropzone">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "Ghost App",
+    "icons": [
+        {
+            "src": "icons/ghost192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/ghost512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "./19.html",
+    "display": "standalone"
+}

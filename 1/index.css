@@ -1,0 +1,114 @@
+:root {
+    --light-color: #FCFCFC;
+    --medium-color: #D9D9D9;
+    --dark-color: #585858;
+    --accent-color: #f1731c;
+
+    --small-font: 0.75rem;
+    --medium-font: 1.5rem;
+    --large-font: 3rem;
+
+    --light-font-color: #FCFCFC;
+    --dark-font-color: #585858;
+}
+
+body {
+    background-color: var(--light-color);
+    padding: 20px;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+section {
+    background-color: var(--medium-color);
+    color: var(--medium-font-color);
+
+    padding: 0 10px 10px 10px;
+}
+
+#firstSection {
+    background-color: var(--dark-color);
+    color: var(--light-font-color);
+    padding-top: 10px;
+}
+
+#firstSection span {
+    font-size: var(--medium-font);
+}
+
+#firstSection ul {
+    display: flex;
+    gap: 3em;
+}
+
+#firstSection a {
+    color: var(--light-font-color);
+}
+
+#secondSection p {
+    padding: 20px 10px;
+}
+
+#secondSection>:first-child::first-letter {
+    font-size: var(--large-font);
+}
+
+.redBorder {
+    border: 2px solid red;
+    border-radius: 10%;
+}
+
+#thirdSection {
+    position: relative;
+}
+
+#thirdSection > div {
+    margin: 10px;
+}
+
+#thirdSection>#firstDiv {
+    max-width: 400px;
+    min-height: 200px;
+    margin-inline: align;
+}
+
+#thirdSection>#firstDiv::first-letter {
+    font-size: var(--large-font);
+}
+
+#thirdSection > #secondDiv {
+    background-color: var(--accent-color);
+    color: var(--light-font-color);
+    font-size: var(--medium-font);
+
+    max-width: 50%;
+    text-align: center;
+    margin-inline: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+ #thirdSection > #thirdDiv {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+}
+
+#thirdSection > #thirdDiv > img {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+}
+
+
+
+
+
+
+

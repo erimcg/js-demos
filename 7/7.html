@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Lecture 7</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+
+<body>
+
+    <h1>Lecture 7 - Asynchronous Programming</h1>
+    <hr>
+
+    <main>
+        <section>
+            <pre><code id="code"></code></pre>
+        </section>
+    </main>
+
+    <script type="module" src="sync1.js"></script>
+    <script type="module" src="sync2.js"></script>
+    <script type="module" src="async1.js"></script>
+    <script type="module" src="async2.js"></script>
+    <script type="module" src="async3.js"></script>
+
+    <script type="module">
+        import {displayScript} from "../modules/display-script.js"
+
+        let node = document.querySelector("#code")
+        displayScript("./sync1.js", node);
+        displayScript("./sync2.js", node);
+        displayScript("./async1.js", node);
+        displayScript("./async2.js", node);
+        displayScript("./async3.js", node);
+    </script>
+</body>
+
+</html>

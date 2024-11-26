@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 19 - PWAs and Workers</title>
+    <link rel="stylesheet" href="19.css">
+
+    <link rel="manifest" href="manifest.json" />
+    <script defer src="19.js"></script>
+</head>
+
+<body>
+    <h1>Lecture 19 - PWAs and Workers</h1>
+    Read Chapter 24 in PJ4WD and <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWAs on
+        MDN</a>
+    <hr>
+
+    <main>
+        <section id="worker1">
+            <button onclick="postMessage()">Get Data</button><br>
+            <button onclick="haltWorker()">Halt Data</button><br>
+
+            <div id="messages"></div>
+        </section>
+
+        <section id="worker2">
+                <span>SharedArrayBuffer</span><br>
+                <span id="counter">0</span>
+        </section>
+    </main>
+</body>
+
+</html>
