@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="19.css">
 
     <link rel="manifest" href="manifest.json" />
-    <script defer src="19.js"></script>
-    <script defer src="loadSharedWorker.js"></script>
 </head>
 
 <body>
@@ -40,11 +38,14 @@
                 <br>
                 <span id="result"></span>
             </fieldset>
-            <button onclick="requestFactorial()">Compute</button>
+            <button id="w3Button">Compute</button>
         </section>
     </main>
 
     <footer></footer>
+
+    <script defer src="19.js"></script>
+    <script defer src="loadSharedWorker.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-
 /*
 Web Workers do not have access to the DOM, can share SharedArrayBuffer.
 Workers work in separate thread from main browser thread.
@@ -64,45 +63,62 @@ document.addEventListener('visibilitychange', (e) => {
 
 /*** Example with SharedArrayBuffer ***/
 
-const worker2 = new Worker('./workers/dedicated2.js')
+//if (typeof SharedArrayBuffer !== 'undefined') {
+console.log(window.crossOriginIsolated)
+console.log(typeof SharedArrayBuffer)
 
-const sharedArray = new SharedArrayBuffer(1)
-const view = new Uint8Array(sharedArray)
-
-view[0] = 1;
-const counter = document.querySelector("#counter")
-
-worker2.addEventListener('message', (e) => {
-    //Recvd message from worker2 indicating worker has addd data to shared buffer
-    // Copy data in sharedbuffer to screen
-    counter.innerText = view[0]
+window.addEventListener('load', () => {
+    console.log("window loaded")
+    console.log(window.crossOriginIsolated)
 })
 
-// share sharedArray with worker thread
-worker2.postMessage(sharedArray)
+if (window.crossOriginIsolated) {
+    const worker2 = new Worker('./workers/dedicated2.js')
+    const sharedArray = new SharedArrayBuffer(1)
+    const view = new Uint8Array(sharedArray)
+
+    view[0] = 1;
+    const counter = document.querySelector("#counter")
+
+    worker2.addEventListener('message', (e) => {
+        //Recvd message from worker2 indicating worker has added data to shared buffer
+        // Copy data in sharedbuffer to screen
+        counter.innerText = view[0]
+    })
+
+    // share sharedArray with worker thread
+    worker2.postMessage(sharedArray)
+}
+
 
 /**** Example with MessageChannel  *****/
 
-const worker3 = new Worker('./workers/dedicated3.js')
+    let channel = new MessageChannel();
+    const worker3 = new Worker('./workers/dedicated3.js')
 
-const channel = new MessageChannel();
-worker3.postMessage(null, [channel.port1])
+    worker3.postMessage(null, [channel.port2])
 
-// button handler
-function requestFactorial() {
-    let value = document.querySelector("input").value
-    if (!isFinite(value)) {
-        return
+    channel.port1.onmessage = (e) => {
+        // Received response from worker 3
+
+        let span = document.querySelector('#result')
+        span.innerText = e.data
     }
 
-    // request computation from worker
-    channel.port2.postMessage(value)
-}
+    // button handler
+    const button = document.querySelector('#w3Button')
 
-channel.port2.onmessage = ({ data }) => {
-    // Received response from worker 3
+    button.addEventListener('click', () => {
+        let value = document.querySelector("input").value
+        if (!isFinite(+value)) {
+            return
+        }
 
-    let span = document.querySelector('#result')
-    span.innerText = data
-}
+        // send input value to worker
+        channel.port1.postMessage(value)
+    })
+
+
+
+
 
