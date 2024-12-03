@@ -1,14 +1,14 @@
-console.log("worker2 started")
+//console.log("worker2 started")
 
 let arr = undefined
 let counter = 0;
 
 self.addEventListener('message', (e) => {
-    console.log('worker2: received message')
-    console.log(e.data)
+    //console.log('worker2: received message')
+    //console.log(e.data)
 
     if (!arr) {
-        console.log('setting view')
+        //console.log('setting view')
         arr = new Uint8Array(e.data)
 
         setInterval(() => {

@@ -9,12 +9,15 @@
 
     <link rel="manifest" href="manifest.json" />
     <script defer src="19.js"></script>
+    <script defer src="loadSharedWorker.js"></script>
 </head>
 
 <body>
     <h1>Lecture 19 - PWAs and Workers</h1>
     Read Chapter 24 in PJ4WD and <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWAs on
         MDN</a>
+
+    <button id="about" onclick="window.open('about.html', '_blank').focus();">About</button>
     <hr>
 
     <main>
@@ -29,7 +32,19 @@
                 <span>SharedArrayBuffer</span><br>
                 <span id="counter">0</span>
         </section>
+
+        <section id="worker3">
+            <fieldset>
+                <legend>Enter number</legend>
+                <input type="text" maxlength="3">
+                <br>
+                <span id="result"></span>
+            </fieldset>
+            <button onclick="requestFactorial()">Compute</button>
+        </section>
     </main>
+
+    <footer></footer>
 </body>
 
 </html>

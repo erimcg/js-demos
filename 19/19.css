@@ -2,9 +2,15 @@ body {
     padding: 20px;
 }
 
+#about {
+    float: right;
+}
+
 main {
     display: flex;
     gap: 30px;
+
+    justify-content: center;
 }
 
 section {
@@ -17,8 +23,6 @@ section {
 
     border: 1px lightgray solid;
     padding: 20px;
-
-    min-width: 300px;
 }
 
 button {
@@ -35,12 +39,26 @@ button {
     max-width: 200px;
 }
 
-#worker2 {
-    
-}
-
 #counter {
     margin-top: 10px;
     font-size: 2rem;
+}
+
+#result{
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+input {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    max-width: 100px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 30px;
 }
 
